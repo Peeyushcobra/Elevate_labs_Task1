@@ -23,7 +23,8 @@ Port 22/tcp (Open) - SSH: I forgot I left this on! It’s open so I can remotely
 3. Living Room Smart TV (192.168.1.42)
 Port 443/tcp (Open) - HTTPS: Secure web traffic.
 Port 8008/tcp (Open) - HTTP-Alt: This is standard for local casting and streaming services (like Chromecast or DLNA).
-Security Risk Analysis
+
+-----Security Risk Analysis------
 Looking at these results, a few things stood out to me from a security perspective:
 The Router's Port 80: Since HTTP isn't encrypted, if a malicious user got onto my Wi-Fi, they could theoretically sniff the network packets and steal my router's admin password. I should look into forcing HTTPS (Port 443) for the router admin page.
 My Laptop's Port 22: Leaving SSH wide open is fine if my password is super strong, but if it's weak, someone could try to brute-force their way into my laptop. I should probably switch to SSH key authentication instead of passwords.
