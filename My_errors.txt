@@ -1,0 +1,6 @@
+#Troubleshooting & Lessons Learned (Self-Debugging)
+
+When I first ran the scan, Nmap gave me an error saying it couldn't open a raw socket. 
+
+* **The Problem:** `Requested scan type (sS) requires root privileges.`
+* **The Fix:** I realized that TCP SYN scans bypass the normal operating system network stack to create custom packets, which requires administrative access. Prepending `sudo` to the command completely fixed the issue.
